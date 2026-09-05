@@ -2,7 +2,6 @@ package br.edu.unifio.eventos.entidades;
 
 import java.time.LocalDateTime;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,9 +23,10 @@ public class Evento {
     private LocalDateTime dataFim;
     private String capacidade;
     private String status;
+    @ManyToOne
     private Categoria categoria;
+    @ManyToOne
     private Local local;
+    @ManyToOne
     private Palestrante palestrante;
-    @ManyToOne 
-    private Inscricao Inscricao;
 }
